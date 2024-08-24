@@ -17,7 +17,7 @@ class FriendController extends Controller
     public function index()
     {
         $currentUserID = Auth::user()->id;
-        $dataFriend = Friend::where('user_id', '=', $currentUserID)->join('users', 'users.id', '=', 'friends.friend_id')->get(['users.*']);
+        $allfriend = Friend::where('user_id', '=', $currentUserID)->join('users', 'users.id', '=', 'friends.friend_id')->get(['users.*']);
 
         return view('friend', compact('dataFriend'));
     }

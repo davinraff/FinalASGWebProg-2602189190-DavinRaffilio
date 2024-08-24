@@ -9,7 +9,7 @@
     @endif
     <div class="container">
         <div class="row">
-            @foreach ($dataFriend as $user)
+            @foreach ($allfriend as $user)
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <img src="{{ asset('storage/' . $user->profile_path) }}" alt="{{ $user->name }}'s profile"

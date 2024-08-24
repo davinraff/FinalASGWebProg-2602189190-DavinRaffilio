@@ -44,7 +44,7 @@
             </form>
 
             <div class="row">
-                @foreach ($dataUser as $user)
+                @foreach ($alluser as $user)
                     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
                             <div class="card-img-wrapper">

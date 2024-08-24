@@ -30,7 +30,7 @@ class UserController extends Controller
             ->pluck('friend_id');
 
         // Query to get users who have not sent a friend request to the current user
-        $dataUser = User::whereNotIn('id', $sentRequestUserIDs)
+        $alluser = User::whereNotIn('id', $sentRequestUserIDs)
             ->whereNotIn('id', $friendUserIDs)
             ->where('id', '!=', $currentUserID)
             ->when($searchTerm, function ($query, $searchTerm) {
